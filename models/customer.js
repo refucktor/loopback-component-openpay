@@ -9,8 +9,8 @@ module.exports = function (Customer) {
         if (!reqBody) {
             next(new Error("Request most have a body with data."));
         }
-        assert(reqBody.name, "There is no name provided");
-        assert(reqBody.email, "There is no email provided");
+        assert(reqBody.name, "There is no 'name' provided");
+        assert(reqBody.email, "There is no 'email' provided");
 
         openpay.customer.create(reqBody, (error, customer) => {
             if (err) {
