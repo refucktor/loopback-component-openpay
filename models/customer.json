@@ -1,0 +1,68 @@
+{
+  "name": "customer",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "default": "active"
+    },
+    "address": {
+      "type": "string"
+    },
+    "creation_date": {
+      "type": "date"
+    },
+    "store": {
+      "reference": {
+        "type": "string"
+      },
+      "barcode_url": {
+        "type": "string"
+      }
+    },
+    "clabe": {
+      "type": "string",
+      "required": true
+    },
+    "external_id": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": ""
+    },
+    "card": {
+      "type": "hasMany",
+      "model": "card",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

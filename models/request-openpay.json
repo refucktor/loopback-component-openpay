@@ -1,0 +1,29 @@
+{
+  "name": "request_openpay",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date"
+    },
+    "response": {
+      "type": "object"
+    },
+    "error": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user":{
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

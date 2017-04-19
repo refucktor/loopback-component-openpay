@@ -1,0 +1,52 @@
+{
+  "name": "card",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "card_op_id": {
+      "type": "string",
+      "required": true
+    },
+    "holder_name": {
+      "type": "string",
+      "required": true
+    },
+    "card_number": {
+      "type": "number",
+      "required": true
+    },
+    "exp_month": {
+      "type": "number",
+      "required": true
+    },
+    "exp_year": {
+      "type": "number",
+      "required": true
+    },
+    "cvv": {
+      "type": "number",
+      "required": true
+    },
+    "default": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "request_openpay": {
+      "type": "hasMany",
+      "model": "request_openpay",
+      "foreignKey": ""
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "user",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
