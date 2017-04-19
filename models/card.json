@@ -18,15 +18,15 @@
       "type": "number",
       "required": true
     },
-    "exp_month": {
+    "expiration_month": {
       "type": "number",
       "required": true
     },
-    "exp_year": {
+    "expiration_year": {
       "type": "number",
       "required": true
     },
-    "cvv": {
+    "cvv2": {
       "type": "number",
       "required": true
     },
