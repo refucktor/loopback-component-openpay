@@ -1,7 +1,7 @@
 'use strict';
 const assert = require('assert');
 const OpenpayClass = require("openpay");
-let openpay = new OpenpayClass(process.env.MERCHANT_ID, process.env.MERCHANT_SK, process.env.OP_IS_PRODUCTION || false);
+let openpay = new OpenpayClass(process.env.MERCHANT_ID, process.env.MERCHANT_SK, process.env.OP_IS_PRODUCTION);
 
 module.exports = function (RequestOpenpay) {
     /**
@@ -74,7 +74,7 @@ module.exports = function (RequestOpenpay) {
     };
 
     RequestOpenpay.remoteMethod('merchantCharge', {
-        http: {path: '/customerCharge', verb: 'post'},
+        http: {path: '/merchantCharge', verb: 'post'},
         accepts: [
             {arg: 'charge', type: 'object', http: {source: 'body'}, required: 'true'}
         ],

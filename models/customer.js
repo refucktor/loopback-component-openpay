@@ -1,7 +1,7 @@
 'use strict';
 const assert = require('assert');
 const OpenpayClass = require("openpay");
-let openpay = new OpenpayClass(process.env.MERCHANT_ID, process.env.MERCHANT_SK, process.env.OP_IS_PRODUCTION || false);
+let openpay = new OpenpayClass(process.env.MERCHANT_ID, process.env.MERCHANT_SK, process.env.OP_IS_PRODUCTION);
 
 module.exports = function (Customer) {
     Customer.beforeRemote('create', (ctx, modelInstance, next) => {
