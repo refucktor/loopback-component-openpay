@@ -8,6 +8,23 @@ After installation you will notice important changes in your application:
     - card
     - customer
     - request_openpay
+    
+### Getting ready
+This component is meant to be used inside a loopback application, there is no point to use it in any other kind of application.
+
+#### Dependencies
+In order to work with openpay you need to install the corresponding package:
+```shell
+npm install --save openpay
+```
+
+#### Environment variables
+Set the following environment variables to work with openpay platform
+```shell
+export MERCHANT_ID="your merchant id"
+export MERCHANT_SK="your merchant secret key"
+
+```
 
 ### Enabling the component
 In order to use this component you need to enable it as any other component. Edit the file
